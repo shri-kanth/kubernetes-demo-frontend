@@ -1,0 +1,21 @@
+<h2 style="display: flex; justify-content: center;">To Do List App</h2>
+<div style="display: flex; justify-content:flex-start;" cdkDropListGroup>
+        <app-list 
+            *ngFor = "let list of lists"
+            [list] = "list"
+            [allLists] = "lists"
+            (listEventEmitter)="listEventReciever($event)">
+        </app-list>
+        <div class="create-list">   
+            <div *ngIf = "!createListActive" class="create-list-title" (click)="activateCreateList()">Create New List</div>
+            <div *ngIf = "createListActive" class="create-list-editor">
+                <div style="padding:5px;"><input placeholder="List Name" [(ngModel)]="createListName"/></div>
+                <div style="padding:5px;"><input type="button" value="Create List" (click)="createList()"></div>
+            </div>
+        </div>
+</div>
+<div *ngIf="loading" class="overlay overlay-background" style="display:flex; justify-content:center; align-items:center;">
+    <div>
+        <img src="assets/loading.gif" alt="Loading... Fetching Data"/>
+    </div>
+</div>

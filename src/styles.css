@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.close-button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    font-size:12; 
+    color: white;
+    background-color: black;
+}
+
+.close-button:hover{
+    font-weight: bold;
+}

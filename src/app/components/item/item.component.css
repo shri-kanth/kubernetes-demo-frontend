@@ -1,0 +1,10 @@
+.item-wrapper{
+    border: 2px solid black;
+    width: 175px;
+    height: 30px;
+    margin:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}

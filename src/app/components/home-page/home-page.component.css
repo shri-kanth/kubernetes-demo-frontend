@@ -1,0 +1,44 @@
+.create-list{
+    width: 200px;
+}
+
+.create-list-title {
+    border: 2px solid black;
+    margin:10px;
+    padding: 10px;
+    height: 20px;
+    display:flex;
+    justify-content: center;
+    overflow:hidden;
+    border-radius: 3%;
+    white-space:nowrap;
+}
+
+.create-list-editor {
+    margin:10px;
+    padding: 10px;
+    height: 60px;
+    white-space:nowrap;
+}
+
+.create-list-title:hover{
+    font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    top : 0;
+    left : 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}

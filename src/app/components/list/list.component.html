@@ -1,0 +1,22 @@
+<div class="list-wrapper">
+  <div class="close-button"><span (click)="deleteList()" style="border:1px solid black">x</span></div>
+  <div style="display:flex;justify-content:center">
+    <div class="list-title">{{list.name}}</div>
+  </div>
+  <div cdkDropList id="{{list.id}}" class="list-items-wrapper" (cdkDropListDropped)="drop($event)">
+      <div style="min-height:10px;"></div>
+      <app-item class="list-item"
+        *ngFor = "let item of list.items"
+        [item] = "item"
+        (itemEventEmitter)="itemEventReciever($event)"
+        cdkDrag>
+      </app-item>
+  </div>
+  <div class="create-item">   
+      <div *ngIf = "!createItemActive" class="create-item-title" (click)="activateCreateItem()">Create New Item</div>
+      <div *ngIf = "createItemActive" class="create-item-editor">
+          <div style="padding:5px;"><input placeholder="Item Name" [(ngModel)]="createItemName"/></div>
+          <div style="padding:5px;"><input type="button" value="Create Item" (click)="createItem()"></div>
+      </div>
+  </div>
+</div>
